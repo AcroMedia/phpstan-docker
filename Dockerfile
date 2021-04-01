@@ -6,6 +6,6 @@ RUN composer global require phpstan/extension-installer \
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
 RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
-    install-php-extensions gd
-        
+    install-php-extensions gd bcmath
+
 ENTRYPOINT ["phpstan"]
